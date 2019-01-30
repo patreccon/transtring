@@ -6,7 +6,7 @@ body{
     background-color:#292929;
     color:white;
     display:flex;
-    height:70px;
+    height:10vh;
     justify-content:space-between;
 }
 .menu{
@@ -45,5 +45,77 @@ body{
     justify-content:inherit;
     margin:0 auto;
     max-width:1000px;
+}
 
+.principal{
+    background-color:#F1F8FF;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+.operation-zone{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.textarea textarea{
+    width:300px;
+    height:200px;
+}
+.buttons{
+    margin-top:10px;    
+}
+.buttons button{
+    border:1px solid black;
+    border-radius:20px;
+    padding:10px 10px;
+
+}
+.footer{
+    align-items:center;
+    background-color:#292929;
+    color:white;
+    display:flex;
+    height:10vh;
+    justify-content:space-between;
+}
+@media screen and (max-width:1023px){
+
+}
+@media screen and (max-width:767){
+    
+}
+@media screen and (max-width:480px){
+    
+}
+@media screen and (max-width:320px){
+    .logo{
+        height:40px;
+        text-align:center;
+        line-height:40px;
+        font-size:2em;
+    }
+    .header{
+    display: block;
+    height: auto;
+    }   
+    .menu ol {
+        display:block;
+        text-align:center;
+        width:100%;
+    }
+    .principal{
+        height:60vh;
+    }
+    .buttons{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .buttons button{
+        padding:10px 0;
+        width: 48%;
+        margin-right:.25em;
+        margin-bottom:10px;
+    }
 }

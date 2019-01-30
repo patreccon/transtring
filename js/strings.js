@@ -3,9 +3,43 @@
 //Tranformar solo la primer letra de cada palabra
 //fondo amarillo para una palabra pasada como parametro
 window.onload = init 
+let textArea
 
 function init(){
-    console.log(printString(transformCapitalLetter('america latina')))
+    textArea = document.getElementById('textToTranform')
+    textArea.focus()
+    upper = document.getElementById('upperTransform')                                
+    lower = document.getElementById('lowerTransform')                        
+    capital  = document.getElementById('capitalTransform')
+    clean  = document.getElementById('clean')
+
+    upper.addEventListener('click',()=>{
+        if(textArea.value)
+            textArea.value = lowertoUpper(textArea.value.trim())
+        else
+            showNotification()
+    })
+    lower.addEventListener('click',()=>{
+        if(textArea.value)
+            textArea.value = uppertoLower(textArea.value.trim())
+        else
+            showNotification()
+    })
+    capital.addEventListener('click',()=>{
+        if(textArea.value)
+            textArea.value = printString(transformCapitalLetter(textArea.value.trim()))
+        else
+            showNotification()
+    })
+    clean.addEventListener('click',()=>{
+        textArea.value = '';
+        textArea.focus()
+    })
+}
+
+function showNotification(){
+    alert('El texto no ha sido ingresado')
+    textArea.focus()
 }
 
 function lowertoUpper(string){
